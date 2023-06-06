@@ -1,6 +1,9 @@
 #!/usr/bin/python3
 
-m = 0
-for c in range(ord('z'), ord('a') - 1, -1):
-    print("{}".format(chr(c - m)), end="")
-    m = 32 if m == 0 else 0
+def magic_calculation(a, b, c):
+
+    if a < b:
+        return (c)
+    if c > b:
+        return (a + b)
+    return (a*b - c)

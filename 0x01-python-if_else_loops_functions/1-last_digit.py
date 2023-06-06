@@ -2,6 +2,8 @@
 import random
 number = random.randint(-10000, 10000)
 
+if number < 0:
+    number = abs(number)
 n = number % 10
 
 if n > 5:

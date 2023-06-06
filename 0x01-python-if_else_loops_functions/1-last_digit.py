@@ -2,15 +2,15 @@
 import random
 number = random.randint(-10000, 10000)
 
+l_digit = abs(number) % 10
 if number < 0:
-    number = -number
-n = number % 10
+    l_digit = -l_digit
 
-if n > 5:
-    print("Last digit of " + str(number) + " is " + str(n) + " and is greater than 5")
+if l_digit > 5:
+    print("Last digit of " + str(number) + " is " + str(l_digit) + " and is greater than 5")
 
-elif n < 6 and n != 0:
-    print("Last digit of " + str(number) + " is " + str(n) + " and is less than 6 and not 0")
+elif l_digit < 6 and l_digit != 0:
+    print("Last digit of " + str(number) + " is " + str(l_digit) + " and is less than 6 and not 0")
 
 else:
-    print("Last digit of " + str(number) + " is " + str(n) + " and is 0")
+    print("Last digit of " + str(number) + " is " + str(l_digit) + " and is 0")

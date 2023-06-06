@@ -7,10 +7,13 @@ if number < 0:
     l_digit = -l_digit
 
 if l_digit > 5:
-    print("Last digit of " + str(number) + " is " + str(l_digit) + " and is greater than 5")
+    print("Last digit of " + str(number) + " is "
+          + str(l_digit) + " and is greater than 5")
 
 elif l_digit < 6 and l_digit != 0:
-    print("Last digit of " + str(number) + " is " + str(l_digit) + " and is less than 6 and not 0")
+    print("Last digit of " + str(number) + " is "
+          + str(l_digit) + " and is less than 6 and not 0")
 
 else:
-    print("Last digit of " + str(number) + " is " + str(l_digit) + " and is 0")
+    print("Last digit of " + str(number) + " is "
+          + str(l_digit) + " and is 0")

@@ -10,6 +10,6 @@ if __name__ == '__main__':
     if num_args == 0:
         print(".", end="\n")
     else:
-        print( str(num_args) + " argument:", end="\n")
+        print(str(num_args) + " argument:", end="\n")
         for i, arg in enumerate(args, start=1):
             print("{}: {}".format(i, arg))

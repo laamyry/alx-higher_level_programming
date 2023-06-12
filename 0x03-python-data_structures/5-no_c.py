@@ -1,9 +1,12 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 
 def no_c(my_string):
 
     new = ""
     for m in range (len(my_string)):
-        if my_string[m] != 'c' and my_string[m] != 'C':
+        if my_string[m] not in ('c', 'C'):
             new += my_string[m]
     return new
+
+
+

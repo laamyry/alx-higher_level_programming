@@ -7,6 +7,3 @@ def no_c(my_string):
         if my_string[m] not in ('c', 'C'):
             new += my_string[m]
     return new
-
-
-

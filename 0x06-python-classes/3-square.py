@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 """defines a square by: (based on 2-square.py) """
 
 
@@ -29,4 +28,4 @@ class Square:
 
         """
 
-        return (self.__size ** self.__size)
+        return (self.__size * self.__size)

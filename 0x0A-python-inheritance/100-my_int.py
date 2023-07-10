@@ -8,10 +8,10 @@ class MyInt(int):
         """def __new__"""
         return (super(MyInt, cls).__new__(cls, *args, **kwargs))
 
-    def __ex__(self, other):
+    def __eq__(self, other):
         """def __ex__"""
         return (int(self) != other)
 
-    def __na__(self, other):
+    def __ne__(self, other):
         """def __na__"""
         return (int(self) == other)

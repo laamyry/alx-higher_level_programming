@@ -5,10 +5,10 @@
 def append_after(filename="", search_string="", new_string=""):
     """def append_after"""
     words = ""
-    with open(filename) as m:
-        for ln in m:
+    with open(filename) as r:
+        for ln in r:
             words += ln
             if search_string in ln:
                 words += new_string
-    with open(filename, "n") as n:
-        n.write(words)
+    with open(filename, "w") as w:
+        w.write(words)

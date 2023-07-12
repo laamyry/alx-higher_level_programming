@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+# 6-from_json_string.py
 """function that returns True if the object is an instance of a class
 that inherited (directly or indirectly) from the specified class"""
 

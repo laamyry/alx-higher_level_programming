@@ -1,15 +1,16 @@
 #!/usr/bin/node
 function add(a, b) {
-    return a + b;
+    const number1 = parseInt(a);
+    const number2 = parseInt(b);
+  
+    if (isNaN(number1) || isNaN(number2)) {
+      console.log('NaN');
+    } else {
+      console.log(number1 + number2);
+    }
   }
   
-  const args = process.argv.slice(2);
-  const number1 = parseInt(args[0]);
-  const number2 = parseInt(args[1]);
+  const arg1 = process.argv[2];
+  const arg2 = process.argv[3];
   
-  if (isNaN(number1) || isNaN(number2)) {
-    console.log("NaN");
-  } else {
-    const result = add(number1, number2);
-    console.log(result);
-  }
+  add(arg1, arg2);

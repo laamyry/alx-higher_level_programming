@@ -8,10 +8,9 @@ class Rectangle {
   }
 
   print () {
-
     for (let m = 0; m < this.height; m++) {
-        console.log('X'.repeat(this.width));
-      }
+      console.log('X'.repeat(this.width));
+    }
   }
 
   rotate () {

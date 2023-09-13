@@ -26,4 +26,4 @@ class Rectangle {
   }
 }
 
-module.exports = Rectangle;width
+module.exports = Rectangle;

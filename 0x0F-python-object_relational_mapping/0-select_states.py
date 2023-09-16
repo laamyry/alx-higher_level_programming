@@ -5,17 +5,17 @@ import sys
 
 if __name__ == '__main__':
     '''Datebase Access'''
-    data_base = MySQLdb.connect(host="localhost",
+    db = MySQLdb.connect(host="localhost",
                          username=sys.argv[1],
                          port=3306,
                          password=sys.argv[2],
-                         data_base=sys.argv[3])
+                         db=sys.argv[3])
 
-    cursor = data_base.cursor()
-    cursor.execute("SELECT * FROM states")
-    rows = cursor.fetchall()
+    cur = db.cursor()
+    cur.execute("SELECT * FROM states")
+    rows = cur.fetchall()
 
     for row in rows:
         print(row)
-    cursor.close()
-    data_base.close()
+    cur.close()
+    db.close()

@@ -11,9 +11,11 @@ if __name__ == '__main__':
                          password=sys.argv[2],
                          data_base=sys.argv[3])
 
-    cur_sor = data_base.cursor()
-    cur_sor.execute("SELECT * FROM states")
-    rows = cur_sor.fetchall()
+    cursor = data_base.cursor()
+    cursor.execute("SELECT * FROM states")
+    rows = cursor.fetchall()
 
     for row in rows:
         print(row)
+    cursor.close()
+    data_base.close()

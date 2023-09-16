@@ -6,9 +6,9 @@ import sys
 if __name__ == '__main__':
     '''Datebase Access'''
     db = MySQLdb.connect(host="localhost",
-                         username=sys.argv[1],
+                         user=sys.argv[1],
                          port=3306,
-                         password=sys.argv[2],
+                         passwd=sys.argv[2],
                          db=sys.argv[3])
 
     cur = db.cursor()

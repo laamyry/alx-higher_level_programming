@@ -13,12 +13,12 @@ if __name__ == '__main__':
                          user=username,
                          passwd=password,
                          db=database)
-curs = db.cursor()
+    curs = db.cursor()
 
-curs.execute("SELECT * FROM states WHERE name LIKE BINARY 'N%' ORDER BY states.id")
-res = curs.fetchone()
-for row in res:
-    print(row)
+    curs.execute("SELECT * FROM states WHERE name LIKE BINARY 'N%' ORDER BY states.id")
+    res = curs.fetchone()
+    for row in res: 
+        print(row)
 
-curs.close()
-db.close()
+    curs.close()
+    db.close()

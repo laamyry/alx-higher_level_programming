@@ -18,7 +18,7 @@ if __name__ == '__main__':
     curs.execute("""SELECT * FROM states WHERE name LIKE BINARY
                  'N%' ORDER BY states.id ASC""")
     res = curs.fetchone()
-    for row in res: 
+    for row in res:
         print(row)
     curs.close()
     db.close()

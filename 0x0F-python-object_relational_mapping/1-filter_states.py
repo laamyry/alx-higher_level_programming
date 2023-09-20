@@ -15,7 +15,7 @@ if __name__ == '__main__':
                          db=database)
 curs = db.cursor()
 
-curs.execute("SELECT * FROM states WHERE name LIKE BINARY 'N%' ORDER BY states.id ASC")
+curs.execute("SELECT * FROM states WHERE name LIKE BINARY 'N%' ORDER BY states.id")
 res = curs.fetchone()
 for row in res:
     print(row)

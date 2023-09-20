@@ -11,7 +11,7 @@ if __name__ == '__main__':
                          db=sys.argv[3])
 cur = db.cursor()
 
-cur.execute("SELECT * FROM stats WHERE name like 'N%' ORDER BY id ASC")
+cur.execute("SELECT * FROM states WHERE name like 'N%' ORDER BY id ASC")
 [print(row) for row in cur.fetchall()]
 
 cur.close()

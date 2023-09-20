@@ -15,3 +15,4 @@ cur.execute("SELECT * FROM stats WHERE name like 'N%' ORDER BY id ASC")
 [print(row) for row in cur.fetchall()]
 
 cur.close()
+db.close()

@@ -18,10 +18,8 @@ if __name__ == '__main__':
 
     rows = cur.fetchall()
 
-    city_names = [row[0] for row in rows]
-    
-    for city in city_names:
-        print(city, end=", ")
+    state = list(row[0] for row in rows)
+    print(*state, sep=", ")
 
     cur.close()
     db.close()

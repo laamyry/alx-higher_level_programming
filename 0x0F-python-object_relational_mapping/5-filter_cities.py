@@ -11,7 +11,7 @@ if __name__ == '__main__':
                           db=argv[3],
                           port=3306)
     cur = db.cursor()
-    cur.execute("""SELECT cities.name ,cities.id
+    cur.execute("""SELECT cities.name ,cities.id, states.name
                 FROM cities JOIN states
                 ON cities.state_id = states.id
                 WHERE states.name = %s

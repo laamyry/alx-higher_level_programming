@@ -7,10 +7,10 @@ url = 'https://alx-intranet.hbtn.io/status'
 try:
     with urllib.request.urlopen(url) as resp:
         content = resp.read()
+        utf8_d = content.decode('utf-8')
+        print("    - type:", type(content))
+        print("    - content:", content)
+        print("    - utf8 content:", utf8_d)
 
-        print('Body response:')
-        print('\t- type: {}'.format(type(content)))
-        print('\t- content: {}'.format(content))
-        
 except Exception as exc:
     print(exc)

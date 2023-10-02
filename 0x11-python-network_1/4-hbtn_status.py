@@ -8,9 +8,8 @@ if __name__ == "__main__":
     try:
         resp = requests.get(url)
         print("Body response:")
-        print("\t- type: {}".format(type(resp)))
-        print("\t- content: {}".format(resp))
-        print("\t- utf8 content: {}".format(resp))
+        print("\t- type: {}".format(type(resp.text)))
+        print("\t- content: {}".format(resp.text))
 
     except Exception as exc:
         print(exc)

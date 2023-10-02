@@ -2,15 +2,16 @@
 '''fetches https://alx-intranet.hbtn.io/status'''
 import urllib.request
 
-url = 'https://alx-intranet.hbtn.io/status'
+if __name__ == "__main__":
+    url = 'https://alx-intranet.hbtn.io/status'
 
-try:
-    with urllib.request.urlopen(url) as resp:
-        content = resp.read()
-        utf8_d = content.decode('utf-8')
-        print("    - type:", type(content))
-        print("    - content:", content)
-        print("    - utf8 content:", utf8_d)
+    try:
+        with urllib.request.urlopen(url) as resp:
+            content = resp.read()
+            utf8_d = content.decode('utf-8')
+            print("\t- type:", type(content))
+            print("\t- content:", content)
+            print("\t- utf8 content:", utf8_d)
 
-except Exception as exc:
-    print(exc)
+    except Exception as exc:
+        print(exc)

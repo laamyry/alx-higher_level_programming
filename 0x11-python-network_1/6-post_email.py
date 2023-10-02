@@ -9,7 +9,7 @@ if __name__ == "__main__":
     url = argv[1]
     mail = argv[2]
     data = {'email': mail}
-    
+
     try:
         resp = requests.post(url, data)
         print(resp.text)

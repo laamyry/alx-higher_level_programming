@@ -11,7 +11,7 @@ if __name__ == "__main__":
     try:
         with request.urlopen(url) as resp:
             content = resp.read()
-            utf8_d = content.decode('utf8')
+            utf8_d = content.decode('utf-8')
             print(utf8_d)
 
     except error.HTTPError as err:

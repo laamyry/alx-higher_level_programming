@@ -5,11 +5,7 @@ import requests
 if __name__ == "__main__":
     url = 'https://intranet.hbtn.io/status'
 
-    try:
-        resp = requests.get(url)
-        print("Body response:")
-        print("\t- type: {}".format(type(resp.text)))
-        print("\t- content: {}".format(resp.text))
-
-    except Exception as exc:
-        print(exc)
+    resp = requests.get(url)
+    print("Body response:")
+    print("\t- type: {}".format(type(resp.text)))
+    print("\t- content: {}".format(resp.text))

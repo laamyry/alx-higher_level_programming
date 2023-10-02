@@ -15,4 +15,4 @@ if __name__ == "__main__":
             print(utf8_d)
 
     except error.HTTPError as err:
-        print("Eror code: ".format(err.code))
+        print("Error code: {}".format(err.code))

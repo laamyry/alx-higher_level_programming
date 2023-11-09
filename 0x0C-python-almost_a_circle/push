@@ -1,5 +1,7 @@
 #!/bin/bash
-git add  "$@"
-read -p "Commit message: " m
+# zsh or bash
+git add "$@"
+echo -en "\e[44myour commit message :\e[0m "
+read m
 git commit -m "$m"
 git push

@@ -12,6 +12,10 @@ class Rectangle(Base):
             raise TypeError("width must be an integer")
         if not isinstance(height, int):
             raise TypeError("height must be an integer")
+        if not isinstance(x, int):
+            raise TypeError("x must be an integer")
+        if not isinstance(y, int):
+            raise TypeError("y must be an integer")
         self.__width = width
         self.__height = height
         self.__x = x

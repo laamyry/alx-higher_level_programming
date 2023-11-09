@@ -68,6 +68,12 @@ class Rectangle(Base):
             raise ValueError(f"{name} must be > 0")
 
     def area(self):
-        '''Computes area of this rectangle.'''
+        ''' adding the public method'''
         ar = self.width * self.height
         return ar
+
+    def display(self):
+        '''adding the public method def display(self)'''
+        dis = '\n' * self.y + (' ' * self.x + '#' *
+                               self.width + '\n') * self.height
+        print(dis, end='')

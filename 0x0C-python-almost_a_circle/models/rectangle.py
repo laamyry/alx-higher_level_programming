@@ -84,3 +84,7 @@ class Rectangle(Base):
             f'[{type(self).__name__}] ({self.id}) '
             f'{self.x}/{self.y} - {self.width}/{self.height}'
         )
+    def up_display(self, **kwargs):
+        '''improving the public method def display(self)'''
+        for key, value in kwargs.items():
+            setattr(self, key, value)

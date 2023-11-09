@@ -85,7 +85,22 @@ class Rectangle(Base):
             f'{self.x}/{self.y} - {self.width}/{self.height}'
         )
 
-    def up_display(self, **kwargs):
+    def up_display(self, id=None, width=None, height=None, x=None, y=None):
         '''improving the public method def display(self)'''
-        for key, value in kwargs.items():
-            setattr(self, key, value)
+        if id is not None:
+            self.id = id
+        if width is not None:
+            self.width = width
+        if height is not None:
+            self.height = height
+        if x is not None:
+            self.x = x
+        if y is not None:
+            self.y = y
+
+    def update(self, *args, **kwargs):
+        '''adding the public method def update(self, *args)'''
+        if args:
+            self.up_display(*args)
+        elif kwargs:
+            self.up_display(**kwargs)

@@ -14,41 +14,41 @@ class Rectangle(Base):
         self.__y = y
 
     @property
-    def get_width(self):
+    def width(self):
         '''get_width'''
         return self.__width
 
-    @get_width.setter
+    @width.setter
     def set_width(self, value):
         '''set_width'''
         self.__width = value
 
     @property
-    def get_height(self):
+    def height(self):
         '''get_height'''
         return self.__height
 
-    @get_height.setter
-    def set_height(self, value):
+    @height.setter
+    def height(self, value):
         '''set_height'''
         self.__height = value
 
     @property
-    def get_x(self):
+    def x(self):
         '''get_x'''
         return self.__x
 
-    @get_x.setter
-    def set_x(self, value):
+    @x.setter
+    def x(self, value):
         '''set_x'''''
         self.__x = value
 
     @property
-    def get_y(self):
+    def y(self):
         '''get_y'''
         return self.__y
 
-    @get_y.setter
+    @y.setter
     def set_y(self, value):
         '''set_y'''
         self.__y = value

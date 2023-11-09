@@ -7,39 +7,39 @@ class Rectangle(Base):
     '''First Rectangle'''
     def __init__(self, width, height, x=0, y=0, id=None):
         super().__init__(id)
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
 
     def get_width(self):
         '''get_width'''
-        return self.__width
-        
+        return self.width
+
     def set_width(self, value):
         '''set_width'''
-        self.__width = value
+        self.width = value
 
     def get_height(self):
         '''get_height'''
-        return self.__height
-        
+        return self.height
+
     def set_height(self, value):
         '''set_height'''
-        self.__height = value
+        self.height = value
 
     def get_x(self):
         '''get_x'''
-        return self.__x
-        
+        return self.x
+
     def set_x(self, value):
         '''set_x'''''
-        self.__x = value
+        self.x = value
 
     def get_y(self):
         '''get_y'''
-        return self.__y
-        
+        return self.y
+
     def set_y(self, value):
         '''set_y'''
-        self.__y = value
+        self.y = value

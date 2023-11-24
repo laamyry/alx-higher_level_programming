@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 # zsh or bash
 git add "$@"
 echo -en "\e[44myour commit message :\e[0m "

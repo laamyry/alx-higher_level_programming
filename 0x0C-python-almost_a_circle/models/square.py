@@ -9,11 +9,6 @@ class Square(Rectangle):
         '''doc of square'''
         super().__init__(size, size, x, y, id)
 
-    def __str__(self):
-        '''doc of square'''
-        return "[Square] ({}) {}/{} - {}".format(
-            self.id, self.x, self.y, self.width)
-
     @property
     def size(self):
         '''doc of square'''
@@ -22,9 +17,8 @@ class Square(Rectangle):
     @size.setter
     def size(self, vl):
         '''doc of square'''
-        self.check_int("width", vl)
-        self.check_positive("width", vl)
         self.width = vl
+        self.height = vl
 
     def update(self, *args, **kwargs):
         '''doc of square'''
@@ -48,3 +42,6 @@ class Square(Rectangle):
     def to_dictionary(self):
         '''doc of square'''
         return {'id': self.id, 'x': self.x, 'size': self.size, 'y': self.y}
+
+    def __str__(self):
+        return f"[Square] ({self.id}) {self.x}/{self.x} - {self.width}"

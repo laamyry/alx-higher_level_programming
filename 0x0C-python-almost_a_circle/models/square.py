@@ -22,22 +22,35 @@ class Square(Rectangle):
 
     def update(self, *args, **kwargs):
         '''doc of square'''
-        if len(args) == 0:
-            id = kwargs["id"] if "id" in kwargs else self.id
-            self.id = id
-            size = kwargs["size"] if "size" in kwargs else self.width
-            x = kwargs["x"] if "x" in kwargs else self.x
-            y = kwargs["y"] if "y" in kwargs else self.y
-        else:
-            if len(args) >= 1:
-                self.id = args[0]
-            size = args[1] if len(args) >= 2 else self.width
-            x = args[2] if len(args) >= 3 else self.x
-            y = args[3] if len(args) >= 4 else self.y
-        self.checks(size, size, x, y)
-        self.width = size
-        self.x = x
-        self.y = y
+        if args and len(args) != 0:
+            i = 0
+            for ar in args:
+                if i == 0:
+                    if ar is None:
+                        self.__init__(self.size, self.x, self.y)
+                    else:
+                        self.id = ar
+                elif i == 1:
+                    self.size = ar
+                elif i == 2:
+                    self.x = ar
+                elif i == 3:
+                    self.y = ar
+                i += 1
+
+        elif kwargs and len(kwargs) != 0:
+            for m, n in kwargs.items():
+                if m == "id":
+                    if n is None:
+                        self.__init__(self.size, self.x, self.y)
+                    else:
+                        self.id = n
+                elif m == "size":
+                    self.size = n
+                elif m == "x":
+                    self.x = n
+                elif m == "y":
+                    self.y = n
 
     def to_dictionary(self):
         '''doc of square'''

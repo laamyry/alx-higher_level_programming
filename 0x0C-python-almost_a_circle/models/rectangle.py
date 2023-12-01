@@ -5,6 +5,7 @@ from models.base import Base
 
 class Rectangle(Base):
     '''doc of Rectangle'''
+
     def __init__(self, width, height, x=0, y=0, id=None):
         super().__init__(id)
         self.width = width
@@ -128,11 +129,14 @@ class Rectangle(Base):
                 elif m == "y":
                     self.y = n
 
-
     def to_dictionary(self):
         '''doc of Rectangle'''
         return {"id": self.id, "width": self.width, "height": self.height,
-            "x": self.x, "y": self.y}
+                "x": self.x, "y": self.y}
+
     def __str__(self):
         '''doc of Rectangle'''
-        return f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
+        return (
+            f"[Rectangle] ({self.id}) {self.x}/{self.y} - "
+            f"{self.width}/{self.height}"
+        )

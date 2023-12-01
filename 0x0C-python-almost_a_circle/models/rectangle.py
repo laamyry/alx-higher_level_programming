@@ -98,7 +98,6 @@ class Rectangle(Base):
 
     def update(self, *args, **kwargs):
         '''doc of Rectangle'''
-        '''doc of square'''
         if args and len(args) != 0:
             i = 0
             for ar in args:
@@ -131,7 +130,9 @@ class Rectangle(Base):
 
 
     def to_dictionary(self):
+        '''doc of Rectangle'''
         return {"id": self.id, "width": self.width, "height": self.height,
             "x": self.x, "y": self.y}
     def __str__(self):
+        '''doc of Rectangle'''
         return f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"

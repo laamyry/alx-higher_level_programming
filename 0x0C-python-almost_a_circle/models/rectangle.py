@@ -98,10 +98,37 @@ class Rectangle(Base):
 
     def update(self, *args, **kwargs):
         '''doc of Rectangle'''
-        if args:
-            self.up_display(*args)
-        elif kwargs:
-            self.up_display(**kwargs)
+        '''doc of square'''
+        if args and len(args) != 0:
+            i = 0
+            for ar in args:
+                if i == 0:
+                    if ar is None:
+                        self.__init__(self.size, self.x, self.y)
+                    else:
+                        self.id = ar
+                elif i == 1:
+                    self.size = ar
+                elif i == 2:
+                    self.x = ar
+                elif i == 3:
+                    self.y = ar
+                i += 1
+
+        elif kwargs and len(kwargs) != 0:
+            for m, n in kwargs.items():
+                if m == "id":
+                    if n is None:
+                        self.__init__(self.size, self.x, self.y)
+                    else:
+                        self.id = n
+                elif m == "size":
+                    self.size = n
+                elif m == "x":
+                    self.x = n
+                elif m == "y":
+                    self.y = n
+
 
     def to_dictionary(self):
         '''doc of square'''
